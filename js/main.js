@@ -122,6 +122,22 @@ if (closeCommitment && commitmentModal) {
       alert('You must be at least 25 years old to join the Men’s or Women’s Ministry.');
       return;
     }
+    function openAnnouncement() {
+  document.getElementById("announcementModal").style.display = "flex";
+}
+
+function closeAnnouncement() {
+  document.getElementById("announcementModal").style.display = "none";
+}
+
+// Optional: close modal when clicking outside
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("announcementModal");
+  if (e.target === modal) {
+    closeAnnouncement();
+  }
+});
+
 
     alert(`Thank you for joining the ${ministry}! We’ll get in touch with you soon.`);
     commitmentForm.reset();
