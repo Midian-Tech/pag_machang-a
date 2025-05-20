@@ -144,3 +144,19 @@ window.addEventListener("click", function (e) {
     commitmentModal.style.display = 'none';
   });
 }
+function openAnnouncement() {
+  document.getElementById("announcementModal").style.display = "flex";
+}
+
+function closeAnnouncement() {
+  document.getElementById("announcementModal").style.display = "none";
+}
+
+// Close when clicking outside modal content
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("announcementModal");
+  if (e.target === modal) {
+    closeAnnouncement();
+  }
+});
+
