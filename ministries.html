@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ministries - PAG Machanga</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+       <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/LOGO.png" alt="PAG Machanga Logo" class="logo-img" />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html" class="active">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ministries-page">
+    <h1>Our Ministries</h1>
+
+    <section class="ministry-card">
+      <h2>Youth Ministry</h2>
+      <p>Empowering young people to grow spiritually through fellowship and service.</p>
+      <button class="join-btn" data-ministry="Youth Ministry">Join</button>
+    </section>
+
+    <section class="ministry-card">
+      <h2>Women’s Ministry</h2>
+      <p>Encouraging women through prayer groups, outreach, and spiritual growth activities.</p>
+      <button class="join-btn" data-ministry="Women’s Ministry">Join</button>
+    </section>
+
+    <section class="ministry-card">
+      <h2>Men’s Ministry</h2>
+      <p>Promoting godly leadership and fellowship among men of faith.</p>
+      <button class="join-btn" data-ministry="Men’s Ministry">Join</button>
+    </section>
+
+    <section class="ministry-card">
+      <h2>Children’s Ministry</h2>
+      <p>Guiding children to know and follow Jesus through fun, safe, Bible-based learning.</p>
+      <button class="join-btn" data-ministry="Children’s Ministry">Join</button>
+    </section>
+
+    <section class="ministry-card">
+      <h2>Outreach Ministry</h2>
+      <p>Serving our community with compassion through evangelism and support services.</p>
+      <button class="join-btn" data-ministry="Outreach Ministry">Join</button>
+    </section>
+
+    <section class="ministry-card">
+      <h2>Praise and Worship Ministry</h2>
+      <p>Leading the church in heartfelt worship and glorifying God through music.</p>
+      <button class="join-btn" data-ministry="Praise and Worship Ministry">Join</button>
+    </section>
+  </main>
+
+  <!-- Commitment Modal -->
+  <div id="commitment-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Join <span id="ministry-name"></span></h2>
+      <form id="commitment-form">
+        <input type="hidden" id="selected-ministry" name="ministry" />
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="residence">Area of Residence:</label>
+        <input type="text" id="residence" name="residence" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="1" />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="commitment">Why do you want to join?</label>
+        <textarea id="commitment" name="commitment" rows="3" required></textarea>
+
+        <button type="submit">Submit Commitment</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>
+        PAG Machanga is a Pentecostal church located in Embu County, Mbeere South. We are committed to spiritual growth, community service, and spreading the love of Christ.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>PAG Machanga Church</p>
+      <p>Mbeere South, Embu County</p>
+      <p>100m from the tarmac road</p>
+      <p>Email: <a href="mailto:info@pagmachanga.org">info@pagmachanga.org</a></p>
+      <p>Phone: <a href="tel:+254712345678">+254 712 345 678</a></p>
+      
+      <!-- Social Media -->
+      <div class="social-icons">
+        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Pentecostal Assemblies of God Machanga. All rights reserved.</p>
+  </div>
+</footer>
+
+  </footer>
+</body>
+</html>

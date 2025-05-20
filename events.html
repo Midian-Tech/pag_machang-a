@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events - PAG Machanga</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+       <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/LOGO.png" alt="PAG Machanga Logo" class="logo-img" />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="give.html" class="active">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Your navbar code here -->
+  </header>
+
+  <main class="events-page">
+    <h1>Upcoming Events</h1>
+    <div class="event-card">
+      <h2>Youth Revival Conference</h2>
+      <p>Date: July 10, 2025</p>
+      <p>Time: 10:00 AM</p>
+      <p>Location: PAG Machanga Grounds</p>
+      <button class="register-btn" data-event="Youth Revival Conference">Register</button>
+    </div>
+
+    <!-- Add more events as needed -->
+  </main>
+
+  <!-- Registration Modal -->
+  <div id="registration-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Register for Event</h2>
+      <form id="registration-form">
+        <input type="hidden" id="event-name" name="event" />
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+   <footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p>
+        PAG Machanga is a Pentecostal church located in Embu County, Mbeere South. We are committed to spiritual growth, community service, and spreading the love of Christ.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>PAG Machanga Church</p>
+      <p>Mbeere South, Embu County</p>
+      <p>100m from the tarmac road</p>
+      <p>Email: <a href="mailto:info@pagmachanga.org">info@pagmachanga.org</a></p>
+      <p>Phone: <a href="tel:+254712345678">+254 712 345 678</a></p>
+      
+      <!-- Social Media -->
+      <div class="social-icons">
+        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Pentecostal Assemblies of God Machanga. All rights reserved.</p>
+  </div>
+</footer>
+
+  </footer>
+</body>
+</html>
