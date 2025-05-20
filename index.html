@@ -61,8 +61,13 @@
       <div class="value-box scroll-fade">Ministry</div>
     </div>
   </section>
-  <!-- Blinking Help CTA Button -->
-<button id="cta-help" onclick="openAnnouncement()">?</button>
+<!-- Blinking Help CTA Button -->
+<button id="cta-help" onclick="openAnnouncement()" aria-label="Latest Announcement">
+  <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="#000066">
+    <circle cx="12" cy="12" r="10" fill="white" />
+    <text x="12" y="17" text-anchor="middle" font-size="16" font-family="Arial" fill="#000066">?</text>
+  </svg>
+</button>
 
 <!-- Announcement Modal -->
 <div id="announcementModal" class="modal">
@@ -72,6 +77,7 @@
     <p>We are excited to announce the launch of our church website! The full version with online giving, sermon access, and more features will be coming soon. Stay connected and God bless you!</p>
   </div>
 </div>
+
 
 
   <!-- Full Footer -->
