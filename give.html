@@ -2,94 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Give - PAG Machanga</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .modal input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .cta-btn {
+      padding: 10px 20px;
+      background-color: #000066;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .cta-btn:hover {
+      background-color: #000099;
+    }
+    .close-btn {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav class="navbar">
-       <div class="logo">
+      <div class="logo">
         <a href="index.html">
           <img src="assets/images/LOGO.png" alt="PAG Machanga Logo" class="logo-img" />
         </a>
       </div>
       <div class="hamburger" id="hamburger">&#9776;</div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="ministries.html">Ministries</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="leadership.html">Leadership</a></li>
-        <li><a href="give.html" class="active">Give</a></li>
+        <li><a href="give.html">Give</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="give-page">
-    <h1>Support Our Church</h1>
-    <p>Your generous donations help us run programs, maintain our facilities, and support our community outreach.</p>
-    <h2>Ways to Give</h2>
-    <ul>
-      <li>Mobile Money: Paybill No. 123456</li>
-      <li>Bank Transfer: Account No. 0001234567, Bank Name</li>
-      <li>In-Person Giving during services</li>
-    </ul>
-    <p>Thank you for your generosity!</p>
+  <main>
+    <h2>Support Our Ministry</h2>
+    <p>You can give your offerings, tithes, and donations securely online.</p>
+    <div class="payment-options">
+      <button class="cta-btn" id="mpesaBtn">Pay via M-Pesa</button>
+    </div>
   </main>
+
+  <!-- Modal -->
+  <div id="mpesaModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h3>M-Pesa Payment</h3>
+      <input type="text" id="phoneNumber" placeholder="Enter M-Pesa Phone Number" />
+      <input type="number" id="amount" placeholder="Enter Amount" />
+      <button class="cta-btn" onclick="simulatePayment()">Pay</button>
+      <p id="feedback" style="margin-top: 10px;"></p>
+    </div>
+  </div>
 
   <footer>
     <footer class="site-footer">
-  <div class="footer-container">
-    
-    <!-- About Section -->
-    <div class="footer-section">
-      <h4>About Us</h4>
-      <p>
-        PAG Machanga is a Pentecostal church located in Embu County, Mbeere South. We are committed to spiritual growth, community service, and spreading the love of Christ.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="ministries.html">Ministries</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="give.html">Give</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-section">
-      <h4>Contact Us</h4>
-      <p>PAG Machanga Church</p>
-      <p>Mbeere South, Embu County</p>
-      <p>100m from the tarmac road</p>
-      <p>Email: <a href="mailto:info@pagmachanga.org">info@pagmachanga.org</a></p>
-      <p>Phone: <a href="tel:+254712345678">+254 712 345 678</a></p>
-      
-      <!-- Social Media -->
-      <div class="social-icons">
-        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
-        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="give.html">Give</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>Pentecostal Assemblies of God Machanga</p>
+        <p>Embu County, Mbeere South</p>
+        <p>100m from the tarmac road</p>
+        <p>Phone: <a href="tel:+254712345678">+254 712 345 678</a></p>
+        <p>Email: <a href="mailto:info@machangachurch.org">info@machangachurch.org</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+          <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+        </div>
       </div>
     </div>
-
-  </div>
-
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <p>&copy; 2025 Pentecostal Assemblies of God Machanga. All rights reserved.</p>
-  </div>
-</footer>
-
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pentecostal Assemblies of God Machanga. All rights reserved.</p>
+    </div>
   </footer>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("mpesaModal");
+    const openBtn = document.getElementById("mpesaBtn");
+    const closeBtn = document.getElementById("closeModal");
+    const feedback = document.getElementById("feedback");
+
+    openBtn.onclick = () => modal.style.display = "block";
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+      feedback.textContent = "";
+    };
+    window.onclick = event => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        feedback.textContent = "";
+      }
+    };
+
+    function simulatePayment() {
+      const phone = document.getElementById("phoneNumber").value;
+      const amount = document.getElementById("amount").value;
+      if (!phone || !amount) {
+        feedback.textContent = "Please fill in both fields.";
+        feedback.style.color = "red";
+        return;
+      }
+      feedback.textContent = "A prompt has been sent to your phone. Please enter your M-Pesa PIN to complete the payment.";
+      feedback.style.color = "green";
+    }
+  </script>
 </body>
 </html>
