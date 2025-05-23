@@ -324,6 +324,17 @@ p {
       feedback.textContent = "A prompt has been sent to your phone. Please enter your M-Pesa PIN to complete the payment.";
       feedback.style.color = "green";
     }
+    document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+});
+
   </script>
 </body>
 </html>
